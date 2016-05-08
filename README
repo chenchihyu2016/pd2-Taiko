@@ -1,0 +1,22 @@
+該如何玩此遊戲
+
+(1)以 qt creator 開啟檔案中的 taikoGAME.pro, 並且按下左下角的開始鍵(綠色箭頭）
+(2)按下新視窗的START鍵並開始遊戲
+(3)按下 D 鍵與 L 鍵消除經過之紅鼓與藍鼓, 小鼓得分為一分,大鼓得分為兩分
+(4)遊戲結束後,可按RESTART重新開始遊戲,若要結束遊戲則按END
+缺陷：
+有可能產生疊圖,導致難以判斷.
+
+
+
+程式架構
+
+最一開始進入最初視窗,可選擇start開始遊戲,end直接結束遊戲.
+於畫面上放紅色小鼓兩個(smallRedOne,smallRedTwo),藍色小鼓兩個(smallBlueOne,smallBlueTwo),紅藍大鼓各一個(bigRedOne,bigBlueOne)
+並且各自用move的function做移動,當移出界或在紅心區計算得分後,再將鼓的位置後調,做下一次出現準備
+而計時方面則是用timer_timeOut()和 time_count()做實作,時間的間隔為 1000 ms.
+計分方面是小鼓得一分,大鼓得兩分.
+當時間歸零時,所有鼓應逐漸消失於畫面左邊,進入Dialog視窗且於上方顯示使用者分數,使用者可按restart再次遊玩遊戲,抑或end作遊戲結束.
+
+
+

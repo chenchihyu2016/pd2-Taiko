@@ -4,7 +4,7 @@
 #include <QTime>
 #include <stdlib.h>
 #include<QKeyEvent>
-int  cnt =30;
+int  cnt = 30;
 int score = 0;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,7 +25,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::smallRedOne(){
     x = (rand()%9+10)*100;
-    while( x== u|| x ==x1|| x == u1||x == x2 ||x == u2)
+    while(x==u|| x==x1|| x==u1||x==x2||x==u2)
         x= (rand()%9+10)*100;
     y = 150;
    QTimer *timer  = new QTimer (this);
