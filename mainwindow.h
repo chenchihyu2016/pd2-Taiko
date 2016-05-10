@@ -12,7 +12,6 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-friend class Dialog;
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
